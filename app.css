@@ -434,22 +434,6 @@ video {
   display: none;
 }
 
-body {
-  background-color: floralwhite;
-}
-
-#mainBackgroundImg img {
-  position: relative;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-#sidNar, #mainBlurContainer {
-  position: absolute;
-  top: 50%;
-}
-
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
