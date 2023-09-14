@@ -2,19 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
- body {
-    background-color: floralwhite;
-
- }
- #mainBackgroundImg img {
-position: relative;
-height: 100%;
-object-fit: cover;
-
-}
-#sidNar, #mainBlurContainer {
-   position: absolute;
-   top: 50%;
-}
+@base {
+    body {
+        margin: 0;
+    }
 }
