@@ -1,0 +1,97 @@
+@use 'app.css';
+
+body {
+    
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    height: 100%;
+    color: whitesmoke;
+    background-image: url(images/pexels-Dark-Room.jpg);
+}
+ .BlurContainer {
+     height: 100%;
+ }
+ #sideNav {  
+  gap:15px; 
+  font-size: 22px;  
+  padding: 0.5rem;
+ }
+ .redBackground {
+     background-color: red;
+     border-radius: 100%;
+ }
+ .sideBar {
+ width:fit-content;
+ }
+ .sideBarMovieContainer {
+     .SideBarMovieHeader {
+         display:flex; 
+         align-items: center;
+             font-weight: 800;
+         }
+       }
+     .sideBarMovie {
+         width: 90%;
+         height: 25%; 
+         object-fit: cover; 
+         #ShadowAndBone {
+             background-image: url(images/shadowAndBone.png) ;
+             object-fit: cover;
+         width: 100%; 
+         border-radius: 10%;
+         height: 100%;
+         }
+     }
+ .sideBarChoiceList {
+     :hover{
+         i {
+             color: red;
+         }
+         p {
+             font-weight: bold;
+         }
+     } 
+ .individualSideBarChoice {
+   display: flex;
+  
+ }
+ }
+ .secoundaryRightContainer {
+     .topNav {
+         input {
+             border-radius: 10px;
+         }  
+     }
+ }
+     .hero {
+         height: 20%;
+         width: 95%;
+         overflow: hidden;
+        
+        
+         img {
+             width: 100%;
+             height: 100%;
+             object-fit: cover;
+             border-radius: 20px;
+              object-position: top;
+            
+     } 
+  }
+  .mainMoviesContainer {
+     h3 {
+         font-size: x-large;
+     }
+     .firstMovieRow {
+          overflow: hidden;
+          width: 95%;
+          height: 30%;
+          img {
+              width: 100%;
+              height: 100%; 
+              object-fit: cover;
+          }
+      } 
+ }  
+   
