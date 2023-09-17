@@ -1,0 +1,1 @@
+this is my tailwind project. use the index.html file to run the main code. it has tailwind running through a scss file to customize the page.

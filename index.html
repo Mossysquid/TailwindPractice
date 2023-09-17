@@ -1,132 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tailwind Practice</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/5d38fb97c4.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <div  class="mainContainer flex justify-center items-center mt-10">
-        <div id="sideNav"class=" backdrop-blur-md bg-white/30 ml-4 p-5 rounded-3xl flex  flex-col justify-center item-center" >
-            <a href="#" class="redBackground pl-3 pr-3 pt-2 pb-2"><i class="fa-regular fa-circle-play"></i></a>
-            <a href="#"><i class="fa-solid fa-table-cells-large"></i></a>
-            <i class="fa-sharp fa-light fa-window"></i>
-            <a href="#"><i class="fa-solid fa-tv"></i></a>
-            <a href="#"><i class="fa-solid fa-podcast"></i></a>
-            <a href="#"><i class="fa-brands fa-chromecast"></i></a>
-            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-        </div>
-        <div class="BlurContainer flex backdrop-blur-md bg-white/30 rounded-3xl mr-10 ml-5">
-            <div class="sideBar flex flex-col item-start border-r-2 pl-7 pt-7 pb-7">
-                <div class="w-7/12 netflexLogo" >
-                    <img src="images/netflix-logo.png" class="" alt="netflix-logo">
-                </div>
-                <div class="sideBarChoiceList flex flex-col justify-center gap-5">
-                    <div class="individualSideBarChoice flex items-center gap-4">
-                        <i class="fa-regular fa-circle-dot"></i><p>Browse</p>
-                    </div>
-                    <div class="individualSideBarChoice flex items-center gap-4">
-                        <i class="fa-regular fa-heart"></i><p>Wishlist</p>
-                    </div>
-                    <div class="individualSideBarChoice flex items-center gap-4">
-                        <i class="fa-regular fa-calendar"></i><p>Coming Soon</p>
-                    </div>
-                </div>
-                <div class="sideBarMovieContainer">
-                    <div class="SideBarMovieHeader gap-4">
-                        <h3>New Traliers</h3><i class="fa-solid fa-fire"></i>
-                    </div>
-                    <div id="ShadowAndBone"class="sideBarMovie ">
-                        <h4>Shadow and Bone</h4><i class="fa-solid fa-circle-play"></i>
-                    </div>
-                    <div id="TheNightAgent"class="sideBarMovie ">
-                        <img src="images/theNightAgent.png">
-                        <h4>The Night Agent</h4><i class="fa-solid fa-circle-play"></i>
-                    </div>
-                    <div id="TheWitcher"class="sideBarMovie ">
-                        <img src="images/theWitcher.png">
-                        <h4>The Witcher</h4><i class="fa-solid fa-circle-play"></i>
-                    </div>  
-                </div>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/5d38fb97c4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="mainContainer" class="flex items-center justify-center gap-5">
+      <div
+        id="sideNav"
+        class="backdrop-blur-lg bg-white/30 brightness-0 p-5 rounded-3xl flex gap-5 flex-col justify-center item-center"
+      >
+        <a href="#" class="redBackground pl-2 pr-2 pt-2 pb-2"
+          ><i class="fa-regular fa-circle-play"></i
+        ></a>
+        <a href="#"><i class="fa-solid fa-table-cells-large"></i></a>
+        <a href="#"><i class="fa-solid fa-tv"></i></a>
+        <a href="#"><i class="fa-solid fa-podcast"></i></a>
+        <a href="#"><i class="fa-brands fa-chromecast"></i></a>
+        <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+      </div>
+      <div
+        id="blurContainer"
+        class="flex backdrop-blur-md bg-white/30 backdrop-brightness-0 rounded-3xl items-center"
+      >
+        <div id="sideBar" class="flex flex-col items-center w-1/4">
+          <div
+            class="sideBarChoiceList flex flex-col justify-center gap-5 items-start"
+          >
+            <div class="w-7/12 netflexLogo">
+              <img
+                src="images/netflix-logo.png"
+                class="w-12/12 h-12/12"
+                alt="netflix-logo"
+              />
             </div>
-            <div  class="secoundaryRightContainer flex flex-col flex-grow items-center">
-                <div class="topNav flex flex-row">
-                    <input class="flex-grow-0 w-15 h-15" type="search" placeholder="Search...">
-                    <div class="userLogo flex flex-grow w-15 h-15 justify-end gap-8">
-                        <i class="fa-solid fa-bell"></i>
-                        <div class="mainText"><strong>Samantha G.</strong>
-                        <p>@Samantha</p>
-                        </div>
-                    </div>
+            <div class="individualSideBarChoice flex items-center gap-4 w-1/4">
+              <i class="fa-regular fa-circle-dot"></i>
+              <p class="">Browse</p>
+            </div>
+            <div class="individualSideBarChoice flex items-center gap-4 w-1/4">
+              <i class="fa-regular fa-heart"></i>
+              <p class="">Wishlist</p>
+            </div>
+            <div class="individualSideBarChoice flex items-center gap-4 w-1/4">
+              <i class="fa-regular fa-calendar"></i>
+              <p class="">Coming Soon</p>
+            </div>
+            <div class="SideBarMovieHeader">
+              <h3>New Traliers</h3>
+              <i class="fa-solid fa-fire"></i>
+            </div>
+          </div>
+          <div class="sideBarMovieContainer flex flex-col gap-5 items-center">
+            <div id="SAB" class="sideBarMovie">
+              <div class="sideBarText">
+                <h4>Shadow and Bone</h4>
+                <i class="fa-solid fa-circle-play"></i>
+            </div>
+            </div>
+            <div id="TNA" class="sideBarMovie">
+              <div class="sideBarText">
+                <h4>The Night Agent</h4>
+                <i class="fa-solid fa-circle-play"></i>
+              </div>
+            </div>
+            <div id="TW" class="sideBarMovie">
+              <div class="sideBarText">
+                <h4>The Witcher</h4>
+                <i class="fa-solid fa-circle-play"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="secoundaryRightContainer flex flex-col flex-grow items-center justify-center"
+        >
+          <div id="topNav" class="flex flex-row gap-5 items-center flex-grow-0">
+            <div id="arrowsSearch" class="flex-grow-0 flex gap-4">
+              <i class="fa-solid fa-chevron-left"></i>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div id="searchBar">
+              <input class="" type="search" placeholder="    Search..." />
+            </div>
+            <div
+              id="userLogo"
+              class="flex w-15 h-15 justify-end items-center flex-grow"
+            >
+              <i class="fa-solid fa-bell"></i>
+              <div id="profilePicture" class=""></div>
+              <div class="mainText">
+                <strong>Sam G.</strong>
+                <p>@SamGlov</p>
+              </div>
+            </div>
+          </div>
+          <div class="hero">
+            <div id="PB" class="flex">
+              <div class="flex flex-col j" id="heroTitle">
+                <img src="images/peakyBlinders-logo.png">
+                <div class="heroTextAlignment flex flex-row">
+                  <div class="flex justify-center items-center" id="clickToWatch"><h2>Watch</h2></div>
+                  <div class="flex justify-center items-center" id="whiteCross"><i class="fa-solid fa-plus"></i></div>
                 </div>
-                <div class="hero" >
-                    <img  src="images/peakyBlinders.png" alt="Main moview featured">
+              </div>
+            </div>
+          </div>
+
+          <!--movie rows-->
+          <div class="mainMoviesContainer flex flex-col gap-5">
+            <h3>Popcorn Mania</h3>
+            <div class="firstMovieRow flex">
+              <div id="BNN" class="firstMovies">
+                <div class="text flex flex-row">
+                  <strong>Brooklyn Nine-Nine</strong
+                  ><i class="fa-solid fa-ellipsis-vertical"></i>
                 </div>
-                    <div class="mainMoviesContainer flex flex-col">
-                    <h3>Popcorn Mania</h3>
-                    <div class="firstMovieRow flex">
-                        <div class="firstRowMovieCard">
-                            <img src="images/brookylnNine-Nine.png" alt="movie card">
-                            <div class="text">
-                                <strong>Brooklyn Nine-Nine</strong><i class="fa-solid fa-ellipsis-vertical"></i>
-                            </div>
-                        </div>
-                        <div class="firstRowMovieCard">
-                            <img src="images/readyPlayerOne.png" alt="movie card">
-                            <div class="text">
-                                <strong>Ready Player One</strong><i class="fa-solid fa-ellipsis-vertical"></i>
-                            </div>
-                        </div>
-                        <div class="firstRowMovieCard">
-                            <img src="images/moneyHeist.png" alt="movie card">
-                            <div class="text">
-                                <strong>Money Heist</strong><i class="fa-solid fa-ellipsis-vertical"></i>
-                            </div>
-                        </div>
-                        <div class="firstRowMovieCard">
-                            <img src="images/ashEvilDead.png" alt="movie card">
-                            <div class="text">
-                                <strong>Ash vs. Evil Dead</strong><i class="fa-solid fa-ellipsis-vertical"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <h3>Continue Watching</h3>
-                    <div class="secoundMovieRow flex">
-                            <div class="secoundRowMovieCard">
-                            <img src="images/redNotice.png" alt="movie card">
-                            <i class="fa-solid fa-play"></i>
-                                <div class="secoundRowText">
-                                    <p>Red Notice</p>
-                                </div>
-                            </div>
-                            <div class="secoundRowMovieCard">
-                                <img src="images/extraction.png" alt="movie card">
-                                <i class="fa-solid fa-play"></i>
-                                <div class="secoundRowText">
-                                    <p>Extraction</p>
-                                </div>
-                            </div>
-                            <div class="secoundRowMovieCard">
-                                <img src="images/theAdamProject.png" alt="movie card">
-                                <i class="fa-solid fa-play"></i>
-                                <div class="secoundRowText">
-                                    <p>The Adam Project</p>
-                                </div>
-                            </div>
-                            <div class="secoundRowMovieCard">
-                                <img src="images/theOldGuard.png" alt="movie card">
-                                <i class="fa-solid fa-play"></i>
-                                <div class="secoundRowText">
-                                    <p>The Old Guard</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+
+              <div id="RP1" class="firstMovies">
+                <div class="text flex flex-row">
+                  <strong>Ready Player One</strong
+                  ><i class="fa-solid fa-ellipsis-vertical"></i>
                 </div>
-            </div> 
-        </div> 
+              </div>
+
+              <div id="MH" class="firstMovies">
+                <div class="text flex flex-row">
+                  <strong>Money Heist</strong
+                  ><i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+              </div>
+
+              <div id="AED" class="firstMovies">
+                <div class="text flex flex-row">
+                  <strong>Ash vs. Evil Dead</strong
+                  ><i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+              </div>
+            </div>
+            <h3>Continue Watching</h3>
+            <div class="secoundMovieRow flex">
+              <div class="secoundMovies" id="RN">
+                <i class="fa-solid fa-play"></i>
+                <div class="secoundRowText">
+                  <p>Red Notice</p>
+                  <div id="progressBar"><div id="redSide"></div><div id="whiteSide"></div></div>
+                </div>
+              </div>
+
+              <div class="secoundMovies" id="EX">
+                <i class="fa-solid fa-play"></i>
+                <div class="secoundRowText">
+                  <p>Extraction</p>
+                  <div id="progressBar"><div id="redSide"></div><div id="whiteSide"></div></div>
+                </div>
+              </div>
+
+              <div class="secoundMovies" id="TAP">
+                <i class="fa-solid fa-play"></i>
+                <div class="secoundRowText">
+                  <p>The Adam Project</p>
+                  <div id="progressBar"><div id="redSide"></div><div id="whiteSide"></div></div>
+                </div>
+              </div>
+
+              <div class="secoundMovies" id="TOG">
+                <i class="fa-solid fa-play"></i>
+                <div class="secoundRowText">
+                  <p>The Old Guard</p>
+                  <div id="progressBar"><div id="redSide"></div><div id="whiteSide"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>

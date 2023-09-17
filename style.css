@@ -521,8 +521,16 @@ video {
   display: flex;
 }
 
+.w-1\/4 {
+  width: 25%;
+}
+
 .w-7\/12 {
   width: 58.333333%;
+}
+
+.w-1 {
+  width: 0.25rem;
 }
 
 .flex-grow {
@@ -589,16 +597,16 @@ video {
   padding-bottom: 1.75rem;
 }
 
-.pl-3 {
-  padding-left: 0.75rem;
+.pl-2 {
+  padding-left: 0.5rem;
 }
 
 .pl-7 {
   padding-left: 1.75rem;
 }
 
-.pr-3 {
-  padding-right: 0.75rem;
+.pr-2 {
+  padding-right: 0.5rem;
 }
 
 .pt-2 {
@@ -620,23 +628,44 @@ video {
     margin: 0;
   }
 }
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
   margin: 0;
   padding: 0;
   background-size: cover;
-  height: 100%;
   color: whitesmoke;
   background-image: url(images/pexels-Dark-Room.jpg);
 }
 
-.BlurContainer {
+#mainContainer {
   height: 100%;
 }
 
+#blurContainer {
+  height: 90%;
+  width: 90%;
+}
+
+.secoundMovies, .firstMovies, .sideBarMovie {
+  transition: transform 0.3s;
+}
+
+.secoundMovies:hover, .firstMovies:hover, .sideBarMovie:hover {
+  transform: scale(1.2);
+}
+
+/*navigation left*/
 #sideNav {
-  gap: 15px;
-  font-size: 22px;
+  font-size: 25px;
   padding: 0.5rem;
+}
+#sideNav a {
+  display: flex;
+  justify-content: center;
 }
 
 .redBackground {
@@ -644,72 +673,254 @@ body {
   border-radius: 100%;
 }
 
-.sideBar {
-  width: -moz-fit-content;
-  width: fit-content;
+/*left side of main box*/
+#sideBar {
+  height: 95%;
+  width: 20%;
+  gap: 15px;
 }
 
-.sideBarMovieContainer .SideBarMovieHeader {
+.SideBarMovieHeader {
   display: flex;
   align-items: center;
   font-weight: 800;
+  font-size: 20px;
+  gap: 10px;
+}
+.SideBarMovieHeader i {
+  color: orange;
 }
 
-.sideBarMovie {
-  width: 90%;
-  height: 25%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.sideBarMovie #ShadowAndBone {
-  background-image: url(images/shadowAndBone.png);
-  -o-object-fit: cover;
-     object-fit: cover;
+.sideBarMovieContainer {
   width: 100%;
-  border-radius: 10%;
   height: 100%;
 }
 
+.sideBarMovie {
+  width: 85%;
+  height: 30%;
+  background-size: cover;
+  border-radius: 20px;
+  display: flex;
+  align-items: end;
+  gap: 10px;
+}
+.sideBarMovie .sideBarText {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  background-color: black;
+  opacity: 80%;
+  border-radius: 0 0 20px 20px;
+}
+
+.sideBarChoiceList {
+  width: 85%;
+  /*right side of main box*/
+}
 .sideBarChoiceList :hover i {
   color: red;
 }
 .sideBarChoiceList :hover p {
   font-weight: bold;
 }
+.sideBarChoiceList .SideBarMovieHeader:hover i {
+  color: orangered;
+}
 .sideBarChoiceList .individualSideBarChoice {
   display: flex;
+  font-size: 12px;
 }
 
-.secoundaryRightContainer .topNav input {
+.secoundaryRightContainer {
+  height: 100%;
+  width: 100%;
+}
+.secoundaryRightContainer #topNav {
+  width: 95%;
+  height: 15%;
+  gap: 5%;
+  margin: 0;
+}
+.secoundaryRightContainer #topNav #searchBar input {
   border-radius: 10px;
+  width: 20rem;
+  height: 2rem;
+}
+.secoundaryRightContainer #topNav #userLogo {
+  gap: 5%;
+}
+.secoundaryRightContainer #topNav #userLogo #profilePicture {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  border-radius: 100%;
+  background-image: url(images/pexels-profile.png);
 }
 
 .hero {
-  height: 20%;
+  height: 50%;
   width: 95%;
   overflow: hidden;
-}
-.hero img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
   border-radius: 20px;
-  -o-object-position: top;
-     object-position: top;
 }
 
-.mainMoviesContainer h3 {
-  font-size: x-large;
+#heroTitle {
+  margin-left: 5%;
 }
-.mainMoviesContainer .firstMovieRow {
-  overflow: hidden;
-  width: 95%;
-  height: 30%;
+#heroTitle img {
+  width: 10%;
+  height: 100%;
 }
-.mainMoviesContainer .firstMovieRow img {
+#heroTitle .heroTextAlignment {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  display: flex;
+  gap: 5px;
+}
+#heroTitle #clickToWatch {
+  background-color: red;
+  padding: 5px 10px 5px 10px;
+  border-radius: 10px;
+}
+#heroTitle #whiteCross {
+  background-color: rgb(143, 143, 143);
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+#heroTitle #whiteCross i {
+  font-size: 20px;
+  font-weight: 100;
+}
+
+/*movie rows*/
+.mainMoviesContainer {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  align-items: center;
+  margin-top: 1%;
+  margin-bottom: 2%;
+}
+.mainMoviesContainer h3 {
+  width: 95%;
+  font-size: x-large;
+  text-align: start;
+}
+.mainMoviesContainer .firstMovieRow {
+  width: 95%;
+  height: 100%;
+  gap: 2rem;
+}
+.mainMoviesContainer .firstMovieRow .firstMovies {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  border-radius: 20px;
+  display: flex;
+  align-items: flex-end;
+}
+.mainMoviesContainer .firstMovieRow .firstMovies .text {
+  background-color: black;
+  width: 100%;
+  height: 20%;
+  opacity: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 0 0 20px 20px;
+}
+.mainMoviesContainer .secoundMovieRow {
+  width: 95%;
+  height: 80%;
+  gap: 2rem;
+}
+.mainMoviesContainer .secoundMovieRow .secoundMovies {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.mainMoviesContainer .secoundMovieRow .secoundMovies i {
+  display: flex;
+  margin-bottom: 10%;
+  margin-top: 10%;
+  justify-content: center;
+}
+.mainMoviesContainer .secoundMovieRow .secoundMovies .secoundRowText p {
+  margin-left: 5%;
+}
+.mainMoviesContainer #progressBar {
+  width: 90%;
+  height: 10%;
+  display: flex;
+  margin-bottom: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.mainMoviesContainer #progressBar #redSide {
+  background-color: red;
+  border-radius: 20px 0 0 20px;
+  width: 70%;
+}
+.mainMoviesContainer #progressBar #whiteSide {
+  background-color: lightgrey;
+  border-radius: 0 20px 20px 0;
+  width: 30%;
+}
+
+/*individual movies*/
+#PB {
+  background-image: url(images/peakyBlinders.png);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  align-items: center;
+}
+
+#SAB {
+  background-image: url(images/shadowAndBone.png);
+}
+
+#TNA {
+  background-image: url(images/theNightAgent.png);
+}
+
+#TW {
+  background-image: url(images/theWitcher.png);
+}
+
+#BNN {
+  background-image: url(images/brookylnNine-Nine.png);
+}
+
+#RP1 {
+  background-image: url(images/readyPlayerOne.png);
+}
+
+#AED {
+  background-image: url(images/ashEvilDead.png);
+}
+
+#MH {
+  background-image: url(images/moneyHeist.png);
+}
+
+#RN {
+  background-image: url(images/redNotice.png);
+}
+
+#EX {
+  background-image: url(images/extraction.png);
+}
+
+#TAP {
+  background-image: url(images/theAdamProject.png);
+}
+
+#TOG {
+  background-image: url(images/theOldGuard.png);
 }/*# sourceMappingURL=style.css.map */
